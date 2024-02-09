@@ -17,7 +17,8 @@
     "noImplicitReturns": true,
     "baseUrl": "src",
     "paths": {
-      "@lib/*": ["lib/*"]
+      "@lib/*": ["lib/*"],
+      "@providers/*": ["providers/*"]
     }
   },
   "include": ["src", "env.d.ts", "rollup.config.ts"]
