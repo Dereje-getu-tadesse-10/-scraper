@@ -50,3 +50,7 @@ export const mockHtmlWithoutLinkAndImage = `
      </div>
   </div>
  `
+
+export const mockMalformedHtml = `
+<div class="q-container"><p class="quote-p">Ouupps></div>
+`
