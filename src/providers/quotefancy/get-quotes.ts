@@ -16,7 +16,7 @@ export const getQuotes = (html: string): Quotefancy[] => {
     const image =
       $wallpaperImg.attr('src') ?? $wallpaperImg.attr('data-original') ?? ''
 
-    quotes.push({ quote, url, image })
+    if (quote) quotes.push({ quote, url, image })
   })
 
   return quotes
