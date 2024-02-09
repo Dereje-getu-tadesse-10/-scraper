@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { getQuotes } from '../../src/providers/quotefancy/get-quotes'
-import { mock, mockEmptyHtml } from './mock'
+import { mock, mockEmptyHtml, mockHtmlWithoutLinkAndImage } from './mock'
 
 describe('Quotefancy scraper', () => {
   it('Should parse quotes from HTML', () => {
@@ -23,6 +23,17 @@ describe('Quotefancy scraper', () => {
   it('Should parse HTML and extract data if any is found', () => {
     const quotes = getQuotes(mockEmptyHtml)
     expect(quotes).toBeInstanceOf(Array)
-    expect(quotes).toHaveLength(0)
+    expect(quotes).toHaveLength(1)
+    expect(quotes[0]).toHaveProperty('quote', '')
+    expect(quotes[0]).toHaveProperty('url', '')
+    expect(quotes[0]).toHaveProperty('image', '')
+  })
+  it('Should parse HTML and not find image and href', () => {
+    const quotes = getQuotes(mockHtmlWithoutLinkAndImage)
+    expect(quotes).toBeInstanceOf(Array)
+    expect(quotes).toHaveLength(1)
+    expect(quotes[0]).toHaveProperty('quote')
+    expect(quotes[0]).toHaveProperty('url', '')
+    expect(quotes[0]).toHaveProperty('image', '')
   })
 })
