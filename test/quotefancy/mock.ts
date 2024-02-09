@@ -22,3 +22,14 @@ export const mock = `
      </div>
   </div>
 `
+
+export const mockEmptyHtml = `
+  <div class="q-container">
+  </div>
+  <div class="wallpaper scrollable" id="wall45765">
+  </div>
+  <div class="q-container">
+     <div class="q-wrapper">
+     </div>
+  </div>
+`
