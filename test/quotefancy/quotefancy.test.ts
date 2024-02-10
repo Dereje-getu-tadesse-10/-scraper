@@ -16,6 +16,7 @@ describe('Quotefancy scraper', () => {
       'quote',
       'Happiness and confidence are the prettiest things you can wear.'
     )
+    expect(quotes[0]).toHaveProperty('author', 'Taylor Swift')
     expect(quotes[0]).toHaveProperty(
       'url',
       'https://quotefancy.com/quote/76125/Taylor-Swift-Happiness-and-confidence-are-the-prettiest-things-you-can-wear'

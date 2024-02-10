@@ -10,9 +10,6 @@ export const mock = `
      <div class="q-wrapper">
         <p class="quote-p">2. “<a class="quote-a" href="https://quotefancy.com/quote/76125/Taylor-Swift-Happiness-and-confidence-are-the-prettiest-things-you-can-wear">Happiness and confidence are the prettiest things you can wear.</a>”</p>
         <p class="author-p">— <a href="https://quotefancy.com/taylor-swift-quotes">Taylor Swift</a></p>
-        <p class="author-p">Featured in:
-           <a href="https://quotefancy.com/happiness-quotes">Happiness Quotes</a>, <a href="https://quotefancy.com/confidence-quotes">Confidence Quotes</a>
-        </p>
      </div>
   </div>
 `

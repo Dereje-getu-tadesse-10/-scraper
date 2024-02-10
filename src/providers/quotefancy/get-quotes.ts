@@ -11,12 +11,13 @@ export const getQuotes = (html: string): Quotefancy[] => {
 
     const quote = $quoteLink.text().trim()
     const url = $quoteLink.attr('href') ?? ''
+    const author = $quoteContainer.find('p.author-p a').text() ?? ''
 
     const $wallpaperImg = $quoteContainer.prev('.wallpaper').find('img')
     const image =
       $wallpaperImg.attr('src') ?? $wallpaperImg.attr('data-original') ?? ''
 
-    if (quote) quotes.push({ quote, url, image })
+    if (quote) quotes.push({ quote, author, url, image })
   })
 
   return quotes
