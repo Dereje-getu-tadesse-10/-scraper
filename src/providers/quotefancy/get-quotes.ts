@@ -1,5 +1,5 @@
 import { load } from 'cheerio'
-import { Quotefancy } from 'types'
+import { Quotefancy } from './type'
 
 export const getQuotes = (html: string): Quotefancy[] => {
   const $ = load(html)
