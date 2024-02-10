@@ -16,10 +16,14 @@
     "noImplicitAny": false,
     "noImplicitReturns": true,
     "baseUrl": "src",
+    "rootDir": "src",
+    "declaration": true,
+    "declarationMap": false,
+    "outDir": "./dist/types",
     "paths": {
       "@lib/*": ["lib/*"],
       "@providers/*": ["providers/*"]
     }
   },
-  "include": ["src", "env.d.ts", "rollup.config.ts"]
+  "include": ["src/**/*", "env.d.ts", "rollup.config.ts"]
 }

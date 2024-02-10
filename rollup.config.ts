@@ -37,12 +37,15 @@ export default defineConfig([
       clean('buildStart', 'dist'),
       resolve(),
       commonjs(),
-      ts({ compilerOptions: { declaration: true, outDir: 'dist/types' } })
+      ts({ tsconfig: 'tsconfig.json' })
     ]
   },
   {
+    // input: 'dist/types/index.d.ts',
+    // output: [{ file: pkg.types, format: 'es' }],
+    // plugins: [dts(), clean('buildEnd', 'dist/types')]
     input: 'dist/types/index.d.ts',
-    output: [{ file: pkg.types, format: 'es' }],
-    plugins: [dts(), clean('buildEnd', 'dist/types')]
+    output: [{ file: 'dist/index.d.ts', format: 'es' }],
+    plugins: [dts()]
   }
 ])
