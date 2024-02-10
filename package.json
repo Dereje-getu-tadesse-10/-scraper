@@ -1,10 +1,11 @@
 {
-  "name": "scraper",
+  "name": "stayc",
   "version": "1.0.0",
-  "description": "scraper",
+  "description": "stayc scraper",
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
+  "license": "MIT",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
