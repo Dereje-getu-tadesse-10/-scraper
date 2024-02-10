@@ -12,7 +12,9 @@
       "require": "./dist/index.cjs"
     }
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "format": "prettier --write .",
     "lint": "eslint --ext .js,.cjs,.mjs,.ts,.cts,.mts src/**",
