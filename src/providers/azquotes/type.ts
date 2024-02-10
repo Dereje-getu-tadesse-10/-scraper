@@ -1,10 +1,10 @@
 import { z } from 'zod'
 import { quoteSchema } from '@providers/quotefancy'
 
-const azquoteSchema = quoteSchema.partial({
+const azquotesSchema = quoteSchema.partial({
   image: true
 })
 
-export const AzquoteSchema = azquoteSchema.array()
+export const AzquotesSchema = azquotesSchema.array()
 
-export type Azquotes = z.infer<typeof azquoteSchema>
+export type Azquotes = z.infer<typeof azquotesSchema>
