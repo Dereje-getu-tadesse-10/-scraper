@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { quoteSchema } from '@providers/quotefancy'
+import { quoteSchema } from './../quotefancy/type'
 
 const azquotesSchema = quoteSchema.partial({
   image: true

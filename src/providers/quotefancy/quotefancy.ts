@@ -1,6 +1,6 @@
 import { fetchHtml } from '@lib/fetch-html'
 import { Quotefancy, QuotefancySchema } from './type'
-import { getQuotes } from '@providers/quotefancy/get-quotes'
+import { getQuotes } from './get-quotes'
 
 export const quotefancy = async (url: string): Promise<Quotefancy[]> => {
   if (!url) {

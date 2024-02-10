@@ -1,4 +1,4 @@
-import { azquotes } from '@providers/azquotes/azquotes'
-import { Azquotes } from '@providers/azquotes/type'
+import { azquotes } from './azquotes'
+import { Azquotes } from './type'
 
 export { azquotes, Azquotes }

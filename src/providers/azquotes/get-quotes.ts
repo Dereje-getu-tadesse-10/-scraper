@@ -2,6 +2,8 @@ import { load } from 'cheerio'
 import { Azquotes } from './type'
 
 export const getQuotes = (html: string): Azquotes[] => {
+  const AZQUOTES_BASE_URL = 'https://www.azquotes.com'
+
   const $ = load(html)
   const quotes: Azquotes[] = []
 
@@ -13,15 +15,12 @@ export const getQuotes = (html: string): Azquotes[] => {
       $(elem).find('a.zoom-cur img').attr('src')
     const quoteUrl = $(elem).find('p a.title').attr('href')
 
-    const baseImageUrl = 'https://www.azquotes.com'
-    const baseQuoteUrl = 'https://www.azquotes.com'
-
     if (quote)
       quotes.push({
         quote,
         author,
-        image: imageUrl ? `${baseImageUrl}${imageUrl}` : '',
-        url: quoteUrl ? `${baseQuoteUrl}${quoteUrl}` : ''
+        image: imageUrl ? `${AZQUOTES_BASE_URL}${imageUrl}` : '',
+        url: quoteUrl ? `${AZQUOTES_BASE_URL}${quoteUrl}` : ''
       })
   })
 
