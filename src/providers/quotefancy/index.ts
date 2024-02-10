@@ -1,4 +1,4 @@
 import { quotefancy } from './quotefancy'
-import { Quotefancy } from './type'
+import { Quotefancy, quoteSchema } from './type'
 
-export { quotefancy, Quotefancy }
+export { quotefancy, Quotefancy, quoteSchema }
