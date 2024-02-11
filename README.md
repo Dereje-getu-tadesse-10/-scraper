@@ -1,9 +1,5 @@
 # Stayc
 
-### Compatibility
-
-stayc currently does not work in the edge runtime environments.
-
 ### Introduction
 
 stayc is a simple scraper that gets quotes from websites like quotefancy and azquotes for now. You can easily get quotes by giving stayc the URL of a quotes page. For example, for quotes from Taylor Swift on azquotes, just use the URL `https://www.azquotes.com/author/14371-Taylor_Swift`. It's the same for quotefancy. stayc works with both ESM and CJS modules, making it useful for different JavaScript projects. More quote sites will be added in the future.
@@ -73,12 +69,12 @@ fetchQuotefancy()
 You can import type of `quotefancy` and `azquotes` from stayc in TypeScript projects.
 
 ```ts
-import { azquotes, Azquotes } from 'stayc'
+import { azquotes, Quote } from 'stayc'
 // or
-import { quotefancy, Quotefancy } from 'stayc'
+import { quotefancy, Quote } from 'stayc'
 ```
 
-When you import `Quotefancy` or `Azquotes`, you'll get the type of `quotefancy` or `azquotes` respectively.
+When you import `Quote` from `stayc`, you'll get the type for quotefancy or azquotes.
 
 ### Response
 
@@ -122,6 +118,7 @@ Quotefancy Example Response
 - Scrape quotes from `quotefancy` and `azquotes`.
 - Supports both ESM and CJS module systems.
 - Easy to integrate into JavaScript projects.
+- Support Edge runtime.
 
 ### License
 
