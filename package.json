@@ -1,7 +1,7 @@
 {
   "name": "stayc",
   "version": "1.1.0",
-  "description": "stayc scraper",
+  "description": "Stayc is an npm package for getting quotes from Quotefancy and Azquotes.",
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
