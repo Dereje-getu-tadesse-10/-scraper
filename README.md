@@ -120,6 +120,14 @@ Quotefancy Example Response
 - Easy to integrate into JavaScript projects.
 - Support Edge runtime.
 
+### Providers
+
+All websites supported by `stayc` are listed in the `providers` folder.
+
+- Quotefancy
+- Azquotes
+- BrainyQuote (coming soon)
+
 ### License
 
 `stayc` is released under the MIT License. See the LICENSE file in the project repository for more details.
