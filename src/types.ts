@@ -7,6 +7,6 @@ export const quoteSchema = z.object({
   image: z.string().optional()
 })
 
-export const QuotefancySchema = quoteSchema.array()
+export const quotesSchema = z.array(quoteSchema)
 
-export type Quotefancy = z.infer<typeof quoteSchema>
+export type Quote = z.infer<typeof quoteSchema>

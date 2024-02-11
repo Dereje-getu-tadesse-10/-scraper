@@ -1,4 +1,5 @@
-import { quotefancy, Quotefancy } from './providers/quotefancy/index'
-import { azquotes, Azquotes } from './providers/azquotes/index'
+import { quotefancy } from './providers/quotefancy/index'
+import { azquotes } from './providers/azquotes/index'
+import { Quote } from './types'
 
-export { quotefancy, azquotes, Quotefancy, Azquotes }
+export { quotefancy, azquotes, Quote }

@@ -1,5 +1,5 @@
 import { load } from 'cheerio'
-import { Azquotes } from './type'
+import { Quote as Azquotes } from '../../types'
 
 export const getQuotes = (html: string): Azquotes[] => {
   const AZQUOTES_BASE_URL = 'https://www.azquotes.com'

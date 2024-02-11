@@ -1,5 +1,5 @@
 import { fetchHtml } from '@lib/fetch-html'
-import { Quotefancy, QuotefancySchema } from './type'
+import { Quote as Quotefancy, quotesSchema } from '../../types'
 import { getQuotes } from './get-quotes'
 
 export const quotefancy = async (url: string): Promise<Quotefancy[]> => {
@@ -11,7 +11,7 @@ export const quotefancy = async (url: string): Promise<Quotefancy[]> => {
 
   const quotes = getQuotes(html)
 
-  const result = QuotefancySchema.safeParse(quotes)
+  const result = quotesSchema.safeParse(quotes)
 
   if (!result.success) {
     const errors = result.error.issues

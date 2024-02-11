@@ -30,8 +30,8 @@ export default defineConfig([
   {
     input: 'src/index.ts',
     output: [
-      { file: pkg.main, format: 'cjs' },
-      { file: pkg.module, format: 'es' }
+      { file: pkg.main, format: 'cjs', inlineDynamicImports: true },
+      { file: pkg.module, format: 'es', inlineDynamicImports: true }
     ],
     plugins: [
       clean('buildStart', 'dist'),
@@ -41,9 +41,6 @@ export default defineConfig([
     ]
   },
   {
-    // input: 'dist/types/index.d.ts',
-    // output: [{ file: pkg.types, format: 'es' }],
-    // plugins: [dts(), clean('buildEnd', 'dist/types')]
     input: 'dist/types/index.d.ts',
     output: [{ file: 'dist/index.d.ts', format: 'es' }],
     plugins: [dts()]

@@ -1,18 +1,15 @@
-import https from 'node:https'
+let fetchFn
 
-export const fetchHtml = async (url: string): Promise<string> =>
-  new Promise((resolve, reject) => {
-    https
-      .get(url, (res) => {
-        let html = ''
-        res.on('data', function (chunk) {
-          html += chunk
-        })
-        res.on('end', function () {
-          resolve(html)
-        })
-      })
-      .on('error', (error) => {
-        reject(error)
-      })
-  })
+if (typeof fetch === 'function') {
+  fetchFn = fetch
+} else {
+  fetchFn = require('node-fetch')
+}
+
+export const fetchHtml = async (url: string): Promise<string> => {
+  const response = await fetchFn(url)
+  if (!response.ok) {
+    throw new Error(`Failed to fetch ${url}: ${response.statusText}`)
+  }
+  return await response.text()
+}

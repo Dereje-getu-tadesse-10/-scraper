@@ -1,5 +1,5 @@
 import { fetchHtml } from '@lib/fetch-html'
-import { Azquotes, AzquotesSchema } from './type'
+import { Quote as Azquotes, quotesSchema } from '../../types'
 import { getQuotes } from './get-quotes'
 
 export const azquotes = async (url: string): Promise<Azquotes[]> => {
@@ -11,7 +11,7 @@ export const azquotes = async (url: string): Promise<Azquotes[]> => {
 
   const quotes = getQuotes(html)
 
-  const result = AzquotesSchema.safeParse(quotes)
+  const result = quotesSchema.safeParse(quotes)
 
   if (!result.success) {
     const errors = result.error.issues
