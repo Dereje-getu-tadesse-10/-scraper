@@ -1,6 +1,6 @@
 {
   "name": "stayc",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Stayc is an npm package for getting quotes from Quotefancy and Azquotes.",
   "homepage": "https://github.com/Dereje-getu-tadesse-10/stayc",
   "main": "./dist/index.cjs",
